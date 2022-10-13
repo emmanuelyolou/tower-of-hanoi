@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="jeu.css">
+	<link rel="stylesheet" type="text/css" href="icones/css/all.css">
+</head>
+<body>
+
+	<audio src="musiques/bg_music.mp3" id="main_music" loop=""></audio>
+	<audio src="musiques/win.m4a" id="win_music"></audio>
+	<audio src="musiques/move.mp3" id="move_sfx"></audio>
+	<audio src="musiques/error2.mp3" id="error_sfx"></audio>
+	<audio src="musiques/alert.m4a" id="alert_sfx"></audio>
+	<audio src="musiques/hover_button.m4a" id="window_sfx"></audio>
+	<audio src="musiques/exit_warning.m4a" id="warning_sfx"></audio>
+	<audio src="musiques/side_menu.mp3" id="menu_sfx"></audio>
+	<audio src="musiques/click_button.mp3" id="click_button_sfx"></audio>
+	<audio src="musiques/hover_link.mp3" id="link_sfx"></audio>
+	<audio src="musiques/reset.mp3" id="reset_sfx"></audio>
+	<audio src="musiques/hover_level.mp3" id="level_sfx"></audio>
+	<audio src="musiques/click_checkbox.mp3" id="checkbox_sfx"></audio>
+	<audio src="musiques/click_tap_button.mp3" id="tap_sfx"></audio>
+	<audio src="musiques/reset2.mp3" id="reset2_sfx"></audio>
+	
+
+	<img src="images/bluesky.jpg" class="image">
+
+	<section id="jeu">
+
+		<!--Icone rejouer-->
+		<i class="fas fa-undo fa-2x" id="reset_button" onclick="resetSound();"
+		title="rejouer"></i>
+		
+		<!--Menu hamburger-->
+		<a href="#" title="Menu" onclick="sideMenuSound();">
+			<i class="fas fa-bars fa-2x" id="hamburger_menu"></i>
+		</a>
+		
+		
+		
+		<nav id="side_menu">
+			<ul>
+				<li><a href="#" id="help" onclick="windowSound();"
+					onmouseover="linkHoverSound();">Aide</a></li>
+
+				<li><a href="#" id="settings" onclick="windowSound();"
+					onmouseover="linkHoverSound();">Paramètres</a></li>
+
+				<li><a href="#" id="main_menu" onclick="warningSound();"
+					onmouseover="linkHoverSound();">Menu Principal</a></li>
+			</ul>
+		</nav>
+		
+
+		<div class="content">
+			<div class = "block" id = "block_1" >
+				<div class = "tower" id="left_tower"></div>
+
+				<div id = "left_discs" class="the_discs"></div>
+	
+				<input type="button" value = "Tap" id="left_button"
+				onclick="tapButtonSound();" />
+			</div>
+
+
+			<div class = "block" id="block_2">
+				<div class = "tower" id="middle_tower"></div>
+
+				<div id = "middle_discs" class="the_discs"></div>
+
+				<input type="button" value = "Tap" id="middle_button"
+				onclick="tapButtonSound();" />
+			</div>
+
+
+			<div class = "block" id="block_3">
+				<div class = "tower" id="right_tower"></div>
+
+				<div id = "right_discs" class="the_discs"></div>
+	
+				<input type="button" value = "Tap" id="right_button"
+				onclick="tapButtonSound();" />
+			</div>
+		</div>
+
+	</section>
+	
+	<section id="window_info" class="window">
+
+		<div id="home_menu">
+			<h1>Choisissez un niveau</h1>
+			
+			<p>
+				<b>Note :</b> A chaque montée de niveau, un disque
+				supplémentaire est ajouté.<br />
+			</p>
+
+			<div id="lvl_buttons">
+				<input type="button" name="" value="Novice" id="level_1" class="btn" 
+				onmouseover="levelHoverSound();" onclick="buttonClickSound();" />
+
+				<input type="button" name="" value="Facile" id="level_2" class="btn"
+				onmouseover="levelHoverSound();" onclick="buttonClickSound();"/>
+
+				<input type="button" name="" value="Medium" id="level_3" class="btn"
+				onmouseover="levelHoverSound();" onclick="buttonClickSound();"/>
+
+				<input type="button" name="" value="Difficile" id="level_4" class="btn"
+				onmouseover="levelHoverSound();" onclick="buttonClickSound();"/>
+
+				<input type="button" name="" value="Expert" id="level_5" class="btn"
+				onmouseover="levelHoverSound();" onclick="buttonClickSound();"/>
+			</div>
+		</div>
+
+		
+		<div id="end_game" class="pop_up">
+			<h1>Bravo, vous remportez la partie</h1>
+
+			<!--Les message seront generes automatiquement apres le jeu-->
+			<p></p><p></p>
+			
+			<a id="main_menu" href="jeu.html">Menu Principal</a>
+		</div>
+	</section>
+
+
+	<section id="help_menu" class="window">
+		<h1>Aide</h1>
+
+		<h2>Principe:</h2>
+		<p>
+			L'objectif est de réussir à empiler les disques sur 
+			la dernière tour. Vous pouvez aller plus loin en
+			essayant d'effectuer le moins de déplacements possibles.
+		</p>
+		
+		<h2>Mode de jeu:</h2>
+		<p>
+			Servez-vous des boutons en dessous des blocs (avec l'inscription "tap")
+			pour déplacer les disques. Appuyez une premiere fois sur un bouton
+			pour sélectionner le disque tout en haut de son bloc, puis
+			sur un autre bouton pour choisir où le déplacer.
+		</p>
+
+		<h2>Règles:</h2>
+		<p>
+			Chaque déplacement de disque ne peut se faire que
+			si le disque à déplacer est plus petit que le 
+			dernier disque de la tour.
+		</p>
+		<input type="button" value="Fermer" class="close_button" 
+		onmouseover="windowSound();" onclick="buttonClickSound();">
+	</section>
+
+
+
+	<section id="settings_menu" class="window">
+		<h1>Paramètres</h1>
+		
+		<p>
+			<h2>Niveau:</h2> 
+			<select onclick="windowSound();">
+				<option>Novice</option>
+				<option>Facile</option>
+				<option>Medium</option>
+				<option>Difficile</option>
+				<option>Expert</option>
+			</select>
+		</p><br />
+		
+		<p>
+			<h2>Effets sonores:</h2>
+			<input type="checkbox" id="sfx_checkbox" />
+		</p><br />
+
+		<p><h2>Musique:</h2>
+			<input type="checkbox" id="music_checkbox" 
+			onclick="checkboxSound();"></p> <br />
+		
+		<input type="button" value="Valider" class="close_button" id="confirm_settings"
+		onmouseover="windowSound();" onclick="buttonClickSound();">
+	</section>
+
+
+	<section id="exit_menu" class="window">
+		<h1>Quitter la partie ?</h1>
+		
+		<p>Vous allez quitter le jeu. La partie en cours ne sera pas 
+		sauvegardée.</p>
+		<p> Voulez-vous quand même quitter ?</p>
+		<a href="jeu.html">
+			<input type="button" value="Confirmer" class="close_button" id="confirm_exit"
+			onmouseover="windowSound();" onclick="buttonClickSound();">
+		</a>
+
+		<input type="button" value="Annuler" class="close_button" id="cancel_exit"
+		onmouseover="windowSound();" onclick="buttonClickSound();">
+	</section>
+	
+
+	<script src="jeu.js"></script>
+	<script src="menu.js"></script>
+	<script src="musique.js"></script>	
+</body>
+</html>
