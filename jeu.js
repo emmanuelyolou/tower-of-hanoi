@@ -92,28 +92,28 @@ function insertDiscs(number)
 		//En global pour que la fonction isFinished puisse y accéder
 		
 		case 3:
-			discs_width = ['365px', '255px', '150px'];
+			discs_width = ['95%', '66%', '39%'];
 			discs_color = ['green' ,'yellow', 'red'];
 			break;
 
 		case 4:
-			discs_width = ['365px', '300px', '210px', '135px'];
+			discs_width = ['95%', '78%', '55%', '35%'];
 			discs_color = ['green' ,'yellow', 'red', 'purple'];
 			break;
 
 		case 5:
-			discs_width = ['365px', '295px', '210px', '145px', '90px'];
+			discs_width = ['95%', '77%', '55%', '38%', '23%'];
 			discs_color = ['green' ,'yellow', 'red', 'purple', 'darkblue'];
 			break;
 
 		case 6:
 			discs_color = ["green" ,"yellow", "orange", "red", '#ec407a', "purple"];
-			discs_width = ['365px', '325px', '265px', '205px', '145px', '95px'];
+			discs_width = ['95%', '325px', '265px', '205px', '38%', '95px'];
 			break;
 
 		case 7:
 			discs_color = ["green" ,"yellow", "orange", "red", '#ec407a', "purple", "darkblue"];
-			discs_width = ['365px', '325px', '275px', '220px', '160px', '115px', '70px'];
+			discs_width = ['95%', '325px', '275px', '220px', '160px', '115px', '70px'];
 			break;
 	}
 
