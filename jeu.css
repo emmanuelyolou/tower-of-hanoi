@@ -1,5 +1,6 @@
 :root {
 	--disc-height: 33px;
+	--reset-btn-width: 4rem;
 }
 *
 {
@@ -87,6 +88,7 @@
 body
 {
 	margin: 0;
+	height: 100vh;
 	background-color: #80cbc4;
 }
 
@@ -100,6 +102,8 @@ body
 	filter: brightness(0.8);	
 }
 
+
+/* ===================== HOME PAGE SECTION ===========================*/
 .window
 {
 	width: 560px;
@@ -195,6 +199,16 @@ input[type="button"]
 
 
 
+/* ====================================== GAME MODULE =================================== */
+
+.game-section {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
 .block input[type="button"]
 {
 	background-color: #ffa000;
@@ -275,8 +289,6 @@ input[type="button"]
 .content
 {
 	width: 95%;
-	margin:auto;
-	margin-top: 1rem;
 	display:none;
 	text-align: center;
 }
@@ -284,6 +296,8 @@ input[type="button"]
 .block
 {
 	position: relative;
+	translate: 0 -10%;
+
 	background-color: #eee;
 	width:380px;
 	display: inline-flex;
@@ -347,10 +361,13 @@ p b
 
 #reset_button
 {	
+	position: absolute;
+	top: 1rem;
+	right: 1.5rem;
 	display: none;
 	justify-content: center;
 	align-items: center;
-	width: 4rem;
+	width: var(--reset-btn-width);
 	aspect-ratio: 1;
 	margin-left: auto;
 	border-radius: 50%;
@@ -520,10 +537,14 @@ input[type="checkbox"]
 @media screen and (max-width: 992.98px) {
 	:root {
 		--disc-height: 20px;
+		--reset-btn-width: 3.4rem;
 		font-size: 14px;
 	}
 	.tower {
 		width: 15px;
+	}
+	#reset_button {
+		font-size: 1.6rem;
 	}
 }
 
@@ -538,8 +559,12 @@ input[type="checkbox"]
 @media screen and (max-width: 575.98px) {
 	:root {
 		--disc-height: 13px;
+		--reset-btn-width: 3rem;
 	}
 	.tower {
 		width: 7px;
+	}
+	#reset_button {
+		font-size: 1.4rem;
 	}
 }
