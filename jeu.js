@@ -61,7 +61,7 @@ function displayGame()
 	home_menu.style.display = "none";
 	end_game.style.display = "none";
 	window_info.style.display = "none";
-	content.style.display = "block";
+	content.style.display = "flex";
 	document.getElementById('reset_button').style.display = "inline-block";
 	document.getElementById('hamburger_menu').style.display = "inline";
 }
