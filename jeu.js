@@ -62,7 +62,7 @@ function displayGame()
 	end_game.style.display = "none";
 	window_info.style.display = "none";
 	content.style.display = "flex";
-	document.getElementById('reset_button').style.display = "inline-block";
+	document.getElementById('reset_button').style.display = "flex";
 	document.getElementById('hamburger_menu').style.display = "inline";
 }
 
@@ -399,9 +399,7 @@ function resetGame()
 
 function animateresetButton()
 {
-	document.querySelector("#reset_button").className += " " +
-	"spinning_button";
-
+	document.querySelector("#reset_button").classList.add("spinning_button");
 }
 
 

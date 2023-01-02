@@ -1,3 +1,6 @@
+:root {
+	--disc-height: 33px;
+}
 *
 {
 	box-sizing: border-box; 
@@ -273,7 +276,7 @@ input[type="button"]
 {
 	width: 95%;
 	margin:auto;
-	margin-top: 55px;
+	margin-top: 1rem;
 	display:none;
 	text-align: center;
 }
@@ -281,14 +284,15 @@ input[type="button"]
 .block
 {
 	position: relative;
-	height: 390px;
 	background-color: #eee;
 	width:380px;
 	display: inline-flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
-	padding-bottom: 20px;
+	padding-block: 2rem;
+	height: calc(12 * var(--disc-height));
+
 	margin-left: 10px;
 }
 
@@ -316,7 +320,7 @@ input[type="button"]
 .disc
 {
 	position: relative;
-	height: 33px;
+	height: var(--disc-height);
 	border-radius: 20px;
 	transition-property: top;
 	transition-duration: 400ms;
@@ -328,12 +332,11 @@ input[type="button"]
 .the_discs, .the_discs0
 {
 	width: 100%;
-	height: 500px;
 	position: relative;
 	display: flex;
 	flex-direction: column-reverse;
 	align-items: center;
-	margin-bottom: 50px;
+	margin-bottom: 5%;
 }
 
 
@@ -345,15 +348,11 @@ p b
 #reset_button
 {	
 	display: none;
-	position: absolute;
-	top:5px;
-	right: 20px;
-	z-index: 1;
-	line-height: 65px;
-	margin-top: 20px;
-	margin-left: 500px;
-	width: 65px;
-	height: 65px;
+	justify-content: center;
+	align-items: center;
+	width: 4rem;
+	aspect-ratio: 1;
+	margin-left: auto;
 	border-radius: 50%;
 	text-align: center;
 	background-color: #00c853;
@@ -363,7 +362,12 @@ p b
 	transition-property: background-color, transform, box-shadow; 
 	transition-duration: 0.2s, 0.3s, 0.2s;
 }
-
+.reset-btn__wrapper {
+	width: 100%;
+	display: flex;
+	padding-right: 1.5rem;
+	padding-top: 1.5rem;
+}
 #reset_button:hover
 {
 	cursor:pointer;
@@ -510,4 +514,32 @@ input[type="checkbox"]
 #exit_menu
 {
 	display: none;
+}
+
+
+@media screen and (max-width: 992.98px) {
+	:root {
+		--disc-height: 20px;
+		font-size: 14px;
+	}
+	.tower {
+		width: 15px;
+	}
+}
+
+@media screen and (max-width: 767.98px) {
+	:root {
+		--disc-height: 15px;
+	}
+	.tower {
+		width: 10px;
+	}
+}
+@media screen and (max-width: 575.98px) {
+	:root {
+		--disc-height: 13px;
+	}
+	.tower {
+		width: 7px;
+	}
 }
