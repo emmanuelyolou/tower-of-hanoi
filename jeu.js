@@ -108,12 +108,12 @@ function insertDiscs(number)
 
 		case 6:
 			discs_color = ["green" ,"yellow", "orange", "red", '#ec407a', "purple"];
-			discs_width = ['95%', '325px', '265px', '205px', '38%', '95px'];
+			discs_width = ['95%', '85%', '69%', '53%', '38%', '25%'];
 			break;
 
 		case 7:
 			discs_color = ["green" ,"yellow", "orange", "red", '#ec407a', "purple", "darkblue"];
-			discs_width = ['95%', '325px', '275px', '220px', '160px', '115px', '70px'];
+			discs_width = ['95%', '85%', '72%', '57%', '42%', '30%', '18%'];
 			break;
 	}
 
