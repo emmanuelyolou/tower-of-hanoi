@@ -209,24 +209,26 @@ input[type="button"]
 	justify-content: center;
 }
 
-.block input[type="button"]
+.move-disc-btn
 {
 	background-color: #ffa000;
 	color: #fff;
 	border: #ffa000 solid 1px;
-	width: 115px;
-	height: 115px;
+	width: 30%;
+	min-width: 70px;
+	aspect-ratio: 1;
 	padding: 15px 15px 15px 15px;
 	border-radius: 50%;
 	box-shadow: 0 5px 10px #424242;
-
+	display: flex;
+	justify-content: center;
 
 	font-size: 1.8em;
 
 	position: absolute;
 	left: 50%;
-	transform: translateX(-50%);
-	bottom: -125px;
+	translate: -50% 115%;
+	bottom: 0;
 
 	transition-property: color, background-color;
 	transition-timing-function: ease-in;
@@ -234,7 +236,7 @@ input[type="button"]
 }
 
 
-.block input[type="button"]:active
+.move-disc-btn:active
 {
 	width: 105px;
 	height: 105px;
