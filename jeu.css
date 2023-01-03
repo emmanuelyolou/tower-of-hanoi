@@ -221,7 +221,7 @@ input[type="button"]
 	background-color: #ffa000;
 	color: #fff;
 	border: #ffa000 solid 1px;
-	width: 30%;
+	width: 25%;
 	min-width: 70px;
 	aspect-ratio: 1;
 	padding: 15px 15px 15px 15px;
@@ -229,6 +229,7 @@ input[type="button"]
 	box-shadow: 0 5px 10px #424242;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 
 	font-size: 1.8em;
 
@@ -245,8 +246,7 @@ input[type="button"]
 
 .move-disc-btn:active
 {
-	width: 105px;
-	height: 105px;
+	scale: 1.2;
 	font-size: 1.6em;
 	box-shadow: 0 2px 5px #424242;
 }
@@ -297,6 +297,7 @@ input[type="button"]
 
 .content
 {
+	column-gap: .5rem;
 	width: 95%;
 	display:none;
 	text-align: center;
@@ -308,15 +309,13 @@ input[type="button"]
 	translate: 0 -10%;
 
 	background-color: #eee;
-	width:380px;
+	width:100%;
 	display: inline-flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
 	padding-bottom: 2rem;
 	height: calc(12 * var(--disc-height));
-
-	margin-left: 10px;
 }
 
 
@@ -371,6 +370,9 @@ p b
 
 #reset_button
 {	
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: absolute;
 	top: 1rem;
 	right: 1.5rem;
@@ -567,6 +569,9 @@ input[type="checkbox"]
 	}
 	.tower {
 		width: 10px;
+	}
+	.move-disc-btn {
+		font-size: 1.2rem;
 	}
 }
 @media screen and (max-width: 575.98px) {
