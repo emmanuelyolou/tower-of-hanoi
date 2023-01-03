@@ -106,15 +106,16 @@ body
 /* ===================== HOME PAGE SECTION ===========================*/
 .window
 {
-	width: 560px;
+	width: 90%;
+	max-width: 560px;
 	border-radius: 3px;
 	background-color: #fff;
 	min-height: 350px;
-	padding: 5px 50px 50px 50px;
+	padding: 5px 2rem 2rem 2rem;
 	position: absolute;
 	top:50%;
 	left: 50%;
-	transform: translate(-50%, -55%);
+	transform: translate(-50%, -50%);
 	box-shadow: 0 0 10px #424242;
 
 	transition: all 500ms;
@@ -128,6 +129,7 @@ body
 #home_menu h1
 {
 	margin-top: 25px;
+	margin-bottom: 0;
 	font-size: 2.8em;
 	color: #311b92;
 }
@@ -135,7 +137,7 @@ body
 {
 	font-weight: bold;
 	color: #212121;
-	line-height: 40px;
+	line-height: 2rem;
 }
 
 .window h1
@@ -143,7 +145,6 @@ body
 	font-family:'opensans' ,'alata', 'ebrima';
 	font-size: 2.3em;
 	text-align: center;
-	margin-bottom: 40px;
 	color: #212121;
 }
 
@@ -172,6 +173,12 @@ input[type="button"]
 	margin: auto;
 	margin-top: 10px;
 
+}
+
+#lvl_buttons {
+	display: flex;
+	column-gap: .2rem;
+	flex-wrap: wrap;
 }
 
 #lvl_buttons input[type="button"]
