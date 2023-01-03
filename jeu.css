@@ -480,8 +480,10 @@ li
 
 #help_menu
 {
-	width: 690px;
-	height: 540px;
+	max-width: 690px;
+	width: 90%;
+	max-height: 540px;
+	height: 80%;
 	overflow-y: scroll;
 	display: none;
 }
