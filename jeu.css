@@ -113,6 +113,8 @@ body {
 	border-radius: 3px;
 	background-color: #fff;
 	min-height: 350px;
+	max-height: 90%;
+	overflow: auto;
 	padding: 5px 2rem 2rem 2rem;
 	position: absolute;
 	top:50%;
