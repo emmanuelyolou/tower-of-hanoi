@@ -50,7 +50,7 @@ function closeSideMenu()
 			game_buttons[i].style.display = "block";
 		}
 		document.querySelector('#hamburger_menu').style.display ="block";
-		document.querySelector('#reset_button').style.display ="inline-block";
+		document.querySelector('#reset_button').style.display ="flex";
 		document.body.style.backgroundColor = "#80cbc4";
 		document.querySelector('.content').style.opacity = "1";
 	}
