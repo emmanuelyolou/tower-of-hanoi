@@ -237,7 +237,7 @@ input[type="button"]
 
 	position: absolute;
 	left: 50%;
-	translate: -50% 115%;
+	transform: translate( -50%, 115% );
 	bottom: 0;
 
 	transition-property: color, background-color;
@@ -248,7 +248,7 @@ input[type="button"]
 
 .move-disc-btn:active
 {
-	scale: 1.2;
+	transform: translate( -50%, 115% ) scale(1.2);
 	font-size: 1.6em;
 	box-shadow: 0 2px 5px #424242;
 }
@@ -308,7 +308,7 @@ input[type="button"]
 .block
 {
 	position: relative;
-	translate: 0 -10%;
+	transform:translate( 0, -10% );
 
 	background-color: #eee;
 	width:100%;
@@ -333,7 +333,7 @@ input[type="button"]
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	translate: -50% -50%;
+	transform: translate( -50%, -50% );
 	width: 32px;
 	height: 85%;
 	border-radius: 10px;

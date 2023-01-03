@@ -51,7 +51,7 @@ function displayGame()
 		document.body.style.backgroundColor = "#80cbc4";
 		content.style.opacity = "1";
 
-		var buttons = document.querySelectorAll('.block input[type="button"]');
+		var buttons = document.querySelectorAll('.move-disc-btn');
 		for (var i=0; i < buttons.length; i++)
 		{
 			buttons[i].style.display = "inline";
@@ -271,7 +271,7 @@ function move(discsId)
 
 		end_game.style.display = "block";
 		
-		var game_buttons = document.querySelectorAll('.block input[type="button"]');
+		var game_buttons = document.querySelectorAll('.move-disc-btn');
 		for (var i=0; i < game_buttons.length; i++)
 		{
 			game_buttons[i].style.display = "none";
