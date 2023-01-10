@@ -166,7 +166,7 @@ body {
 	color: #424242;
 }
 
-input[type="button"]
+button
 {
 
 	outline:none;
@@ -185,7 +185,7 @@ input[type="button"]
 	flex-wrap: wrap;
 }
 
-#lvl_buttons input[type="button"]
+#lvl_buttons button
 {
 	transition-property: color, background-color, border-color, box-shadow;
 	transition-duration: 300ms;
@@ -199,7 +199,7 @@ input[type="button"]
 	transition-property: color, background-color, border-color, box-shadow;
 }
 
-#lvl_buttons input[type="button"]:hover
+#lvl_buttons button:hover
 {
 	background-color: #29b6f6;
 	border-color: #29b6f6;

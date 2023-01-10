@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 	<title>Tower of Hanoi</title>
 	<meta charset="UTF-8">
@@ -59,8 +59,7 @@
 				<div class = "tower" id="left_tower"></div>
 
 				<div id = "left_discs" class="the_discs"></div>
-	
-				<input class="move-disc-btn" type="button" value = "Tap" id="left_button"/>
+				<button class="move-disc-btn" id="left_button">tap</button>
 			</div>
 
 
@@ -68,8 +67,7 @@
 				<div class = "tower" id="middle_tower"></div>
 
 				<div id = "middle_discs" class="the_discs"></div>
-
-				<input class="move-disc-btn" type="button" value = "Tap" id="middle_button"/>
+				<button class="move-disc-btn" id="middle_button">tap</button>
 			</div>
 
 
@@ -77,8 +75,7 @@
 				<div class = "tower" id="right_tower"></div>
 
 				<div id = "right_discs" class="the_discs"></div>
-	
-				<input class="move-disc-btn" type="button" value = "Tap" id="right_button"/>
+				<button class="move-disc-btn" id="right_button">tap</button>
 			</div>
 		</div>
 
@@ -95,15 +92,11 @@
 			</p>
 
 			<div id="lvl_buttons">
-				<input type="button" name="" value="Novice" id="level_1" class="btn level-btn"/>
-
-				<input type="button" name="" value="Facile" id="level_2" class="btn level-btn"/>
-
-				<input type="button" name="" value="Medium" id="level_3" class="btn level-btn"/>
-
-				<input type="button" name="" value="Difficile" id="level_4" class="btn level-btn"/>
-
-				<input type="button" name="" value="Expert" id="level_5" class="btn level-btn"/>
+				<button class="btn level-btn" id="level_1">Novice</button>
+				<button class="btn level-btn" id="level_2">Facile</button>
+				<button class="btn level-btn" id="level_3">Moyen</button>
+				<button class="btn level-btn" id="level_4">Difficile</button>
+				<button class="btn level-btn" id="level_5">Expert</button>
 			</div>
 		</div>
 
@@ -156,7 +149,7 @@
 			<select>
 				<option>Novice</option>
 				<option>Facile</option>
-				<option>Medium</option>
+				<option>Moyen</option>
 				<option>Difficile</option>
 				<option>Expert</option>
 			</select>
