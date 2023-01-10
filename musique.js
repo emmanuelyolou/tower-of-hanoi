@@ -1,28 +1,53 @@
-
+//Events binding: sounds
 document.querySelectorAll('.level-btn').forEach(btn => 
 	btn.addEventListener('click', () => buttonClickSound()));
 
 document.querySelectorAll('.level-btn').forEach(btn => 
 	btn.addEventListener('mouseover', () => levelHoverSound()));
 
-
 document.querySelector('#reset_button').addEventListener('click', () => resetSound());
 
-		
+
+//sidebar and menu btns
+document.querySelector('.menu-btn').addEventListener('click', () => sideMenuSound());
+
+document.querySelectorAll('.sidebar-link:not(#main_menu)').forEach(btn => 
+	btn.addEventListener('click', () => windowSound()));
+
+document.querySelector('#main_menu').addEventListener('click', () => warningSound());
+
+document.querySelectorAll('.sidebar-link').forEach(btn => 
+	btn.addEventListener('mouseover', () => linkHoverSound()));
+
+
+//Game btns
+
+document.querySelectorAll('.move-disc-btn').forEach(btn => 
+	btn.addEventListener('click', () => tapButtonSound()));
+
+
+document.querySelectorAll('.close_button').forEach(btn => 
+	btn.addEventListener('click', () => buttonClickSound()));
+
+document.querySelectorAll('.close_button, select').forEach(btn => 
+	btn.addEventListener('click', () => windowSound()));
+	
+// //Checkbox
+document.querySelectorAll("input[type=checkbox]").forEach(checkbox => {
+	checkbox.addEventListener('click', () => checkboxSound()); 
+}); 
+	
 
 
 
-
-window.isSfxEnabled = function()
-{
+function isSfxEnabled () { 
 	if (document.querySelector('#sfx_checkbox').checked)
 		return true;
 	else
 		return false;
 }
 
-window.moveSound = function()
-{
+function moveSound () { 
 	if (isSfxEnabled())
 	{
 		document.querySelector('#move_sfx').currentTime = 0.2;
@@ -32,8 +57,7 @@ window.moveSound = function()
 document.querySelector("#move_sfx").volume = 0.9;
 
 
-window.errorSound = function()
-{
+function errorSound () { 
 	if (isSfxEnabled())
 	{
 		document.querySelector('#error_sfx').currentTime = 0.05;
@@ -42,8 +66,7 @@ window.errorSound = function()
 }
 document.querySelector('#error_sfx').volume = 0.6;
 
-window.winSound = function()
-{
+function winSound () { 
 	if (isSfxEnabled())
 	{
 		document.querySelector('#win_music').currentTime = 0;
@@ -53,8 +76,7 @@ window.winSound = function()
 document.querySelector('#win_music').volume = 0.5;
 
 
-window.alertSound = function()
-{
+function alertSound () { 
 	if (isSfxEnabled())
 	{
 		document.querySelector('#alert_sfx').currentTime = 0;
@@ -63,7 +85,7 @@ window.alertSound = function()
 }
 
 
-window.windowSound = function(){
+function windowSound () {
 
 	if (isSfxEnabled())
 	{
@@ -74,8 +96,7 @@ window.windowSound = function(){
 document.querySelector('#window_sfx').volume = 0.7;
 
 
-window.buttonClickSound = function()
-{
+function buttonClickSound () {
 	if (isSfxEnabled())
 	{
 		document.querySelector('#click_button_sfx').currentTime = 0.25;
@@ -85,8 +106,7 @@ window.buttonClickSound = function()
 document.querySelector('#click_button_sfx').volume = 0.3;
 
 
-window.warningSound = function()
-{
+function warningSound () { 
 	if (isSfxEnabled())
 	{
 		document.querySelector('#warning_sfx').currentTime = 0.17;
@@ -95,8 +115,7 @@ window.warningSound = function()
 }
 document.querySelector('#warning_sfx').volume = 0.65;
 
-window.sideMenuSound = function()
-{
+function sideMenuSound () { 
 	if (isSfxEnabled())
 	{
 		document.querySelector('#menu_sfx').currentTime = 0.3;
@@ -106,8 +125,7 @@ window.sideMenuSound = function()
 document.querySelector('#menu_sfx').volume = 0.9;
 
 
-window.linkHoverSound = function()
-{
+function linkHoverSound () { 
 	if (isSfxEnabled())
 	{
 		document.querySelector('#link_sfx').currentTime = 0.17;
@@ -115,8 +133,7 @@ window.linkHoverSound = function()
 	}
 }
 
-window.resetSound = function()
-{
+function resetSound () { 
 	if (isSfxEnabled())
 	{
 		document.querySelector('#reset_sfx').currentTime = 0.35;
@@ -125,8 +142,7 @@ window.resetSound = function()
 }
 document.querySelector('#reset_sfx').volume = 0.6;
 
-window.levelHoverSound = function()
-{
+function levelHoverSound () { 
 	if (isSfxEnabled())
 	{
 		document.querySelector('#level_sfx').currentTime = 0.3;
@@ -135,8 +151,7 @@ window.levelHoverSound = function()
 }
 document.querySelector('#level_sfx').volume = 0.9;
 
-window.tapButtonSound = function()
-{
+function tapButtonSound () { 
 	var move_sound = document.querySelector('#move_sfx');
 
 	//Ne s'execute que si le son du mouvement ne s'exexute pas
@@ -148,25 +163,13 @@ window.tapButtonSound = function()
 }
 document.querySelector("#tap_sfx").volume = 0.45;
 
-window.checkboxSound = function()
-{
+function checkboxSound () { 
 	if (isSfxEnabled())
 	{
 		document.querySelector('#checkbox_sfx').currentTime = 0.3;
 		document.querySelector('#checkbox_sfx').play();
 	}
 }
-
-//On veut que la case "sfx" entraine un son quoi qu'il arrive
-//Reecriture de la fonction sans la condition "isSfxEnabled"
-document.querySelector("#sfx_checkbox").onclick = function()
-{
-	document.querySelector('#checkbox_sfx').currentTime = 0.3;
-	document.querySelector('#checkbox_sfx').play();
-}
-
-
-
 
 
 function handleBgMusicActivation () {

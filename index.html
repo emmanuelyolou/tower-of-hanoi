@@ -37,7 +37,7 @@
 		</div>
 		
 		<!--Menu hamburger-->
-		<a href="#" title="Menu" onclick="sideMenuSound();">
+		<a href="#" class="menu-btn" title="Menu">
 			<i class="fas fa-bars fa-2x" id="hamburger_menu"></i>
 		</a>
 		
@@ -45,14 +45,11 @@
 		<!-- Side Menu -->
 		<nav id="side_menu">
 			<ul>
-				<li><a href="#" id="help" onclick="windowSound();"
-					onmouseover="linkHoverSound();">Aide</a></li>
+				<li><a class="sidebar-link" href="#" id="help">Aide</a></li>
 
-				<li><a href="#" id="settings" onclick="windowSound();"
-					onmouseover="linkHoverSound();">Paramètres</a></li>
+				<li><a class="sidebar-link" href="#" id="settings">Paramètres</a></li>
 
-				<li><a href="#" id="main_menu" onclick="warningSound();"
-					onmouseover="linkHoverSound();">Menu Principal</a></li>
+				<li><a class="sidebar-link" href="#" id="main_menu">Menu Principal</a></li>
 			</ul>
 		</nav>
 		
@@ -63,8 +60,7 @@
 
 				<div id = "left_discs" class="the_discs"></div>
 	
-				<input class="move-disc-btn" type="button" value = "Tap" id="left_button"
-				onclick="tapButtonSound();" />
+				<input class="move-disc-btn" type="button" value = "Tap" id="left_button"/>
 			</div>
 
 
@@ -73,8 +69,7 @@
 
 				<div id = "middle_discs" class="the_discs"></div>
 
-				<input class="move-disc-btn" type="button" value = "Tap" id="middle_button"
-				onclick="tapButtonSound();" />
+				<input class="move-disc-btn" type="button" value = "Tap" id="middle_button"/>
 			</div>
 
 
@@ -83,8 +78,7 @@
 
 				<div id = "right_discs" class="the_discs"></div>
 	
-				<input class="move-disc-btn" type="button" value = "Tap" id="right_button"
-				onclick="tapButtonSound();" />
+				<input class="move-disc-btn" type="button" value = "Tap" id="right_button"/>
 			</div>
 		</div>
 
@@ -149,8 +143,7 @@
 			si le disque à déplacer est plus petit que le 
 			dernier disque de la tour.
 		</p>
-		<input type="button" value="Fermer" class="close_button" 
-		onmouseover="windowSound();" onclick="buttonClickSound();">
+		<input type="button" value="Fermer" class="close_button">
 	</section>
 
 
@@ -160,7 +153,7 @@
 		
 		<p>
 			<h2>Niveau:</h2> 
-			<select onclick="windowSound();">
+			<select>
 				<option>Novice</option>
 				<option>Facile</option>
 				<option>Medium</option>
@@ -175,11 +168,9 @@
 		</p><br />
 
 		<p><h2>Musique:</h2>
-			<input type="checkbox" id="music_checkbox" 
-			onclick="checkboxSound();"></p> <br />
+			<input type="checkbox" id="music_checkbox"></p> <br />
 		
-		<input type="button" value="Valider" class="close_button" id="confirm_settings"
-		onmouseover="windowSound();" onclick="buttonClickSound();">
+		<input type="button" value="Valider" class="close_button" id="confirm_settings">
 	</section>
 
 
@@ -190,12 +181,10 @@
 		sauvegardée.</p>
 		<p> Voulez-vous quand même quitter ?</p>
 		<a href="index.html">
-			<input type="button" value="Confirmer" class="close_button" id="confirm_exit"
-			onmouseover="windowSound();" onclick="buttonClickSound();">
+			<input type="button" value="Confirmer" class="close_button" id="confirm_exit">
 		</a>
 
-		<input type="button" value="Annuler" class="close_button" id="cancel_exit"
-		onmouseover="windowSound();" onclick="buttonClickSound();">
+		<input type="button" value="Annuler" class="close_button" id="cancel_exit">
 	</section>
 	
 
