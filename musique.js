@@ -153,3 +153,30 @@ document.querySelector("#sfx_checkbox").onclick = function()
 }
 
 
+
+
+
+function handleBgMusicActivation () {
+	
+	if (document.querySelector('#music_checkbox').checked==true)
+	{
+		document.querySelector('#main_music').play()
+	}	
+	else
+	{
+		document.querySelector('#main_music').pause()
+		document.querySelector('#main_music').currentTime = 0;
+	}
+}
+
+// Handle page visibility change:
+// - If the page is hidden, pause the video
+// - If the page is shown, play the video
+document.addEventListener("visibilitychange", () => {
+	if (document.hidden) {
+		document.querySelector('#main_music').pause()
+		document.querySelector('#main_music').currentTime = 0;
+	  } else {
+		handleBgMusicActivation();
+	  }
+});

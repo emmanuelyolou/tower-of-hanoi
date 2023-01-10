@@ -2,7 +2,7 @@
 
 //VARIABLES
 
-var games = 0, moves = 0; //le nombre de parties jouees et de mouvements effectues dans la partie
+var games = 0, moves = 0, discs_number = 0; //le nombre de parties jouees et de mouvements effectues dans la partie
 
 var image = document.querySelector('.image');
 var content = document.querySelector('.content');

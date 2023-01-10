@@ -1,3 +1,17 @@
+
+//TODO: import from music
+function handleBgMusicActivation(params) {
+	if (document.querySelector('#music_checkbox').checked==true)
+	{
+		document.querySelector('#main_music').play()
+	}	
+	else
+	{
+		document.querySelector('#main_music').pause()
+		document.querySelector('#main_music').currentTime = 0;
+	}
+}
+
 function openSideMenu()
 {
 	document.getElementById('side_menu').style.width = "250px";
@@ -100,15 +114,7 @@ function closeSideMenu()
 			Expert : 7
 		};
 
-		if (document.querySelector('#music_checkbox').checked==true)
-			{
-				document.querySelector('#main_music').play()
-			}	
-		else
-		{
-			document.querySelector('#main_music').pause()
-			document.querySelector('#main_music').currentTime = 0;
-		}
+		handleBgMusicActivation();
 		closeSettings();
 
 		var curr_discs_number = document.querySelectorAll('.disc').length;
