@@ -1,7 +1,18 @@
 
 document.querySelectorAll('.level-btn').forEach(btn => 
 	btn.addEventListener('click', () => buttonClickSound()));
-	
+
+document.querySelectorAll('.level-btn').forEach(btn => 
+	btn.addEventListener('mouseover', () => levelHoverSound()));
+
+
+document.querySelector('#reset_button').addEventListener('click', () => resetSound());
+
+		
+
+
+
+
 window.isSfxEnabled = function()
 {
 	if (document.querySelector('#sfx_checkbox').checked)
