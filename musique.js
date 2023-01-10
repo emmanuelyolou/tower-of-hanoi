@@ -1,5 +1,7 @@
 
-
+document.querySelectorAll('.level-btn').forEach(btn => 
+	btn.addEventListener('click', () => buttonClickSound()));
+	
 window.isSfxEnabled = function()
 {
 	if (document.querySelector('#sfx_checkbox').checked)
