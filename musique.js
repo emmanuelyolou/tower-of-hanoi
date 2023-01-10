@@ -175,7 +175,6 @@ function handleBgMusicActivation () {
 document.addEventListener("visibilitychange", () => {
 	if (document.hidden) {
 		document.querySelector('#main_music').pause()
-		document.querySelector('#main_music').currentTime = 0;
 	  } else {
 		handleBgMusicActivation();
 	  }
